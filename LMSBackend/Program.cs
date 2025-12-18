@@ -3,21 +3,22 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services
 builder.Services.AddControllers();
 
-// Enable CORS
+// ✅ CORS – allow frontend (Vite / React)
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
-        policy.WithOrigins("http://localhost:3000") // React dev server
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
-// SQLite setup
+// ✅ SQLite database
 builder.Services.AddDbContext<LibraryContext>(options =>
     options.UseSqlite("Data Source=library.db"));
 
@@ -26,15 +27,18 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// Swagger
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+// Middleware
 app.UseHttpsRedirection();
+app.UseCors();           // ⚠ MUST be before MapControllers
 app.UseAuthorization();
-app.UseCors(); // <-- apply CORS
 
 app.MapControllers();
+
 app.Run();

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LMSBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca7f57b51ff0b53d40fc57359c2057fbf3622d45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ecbbe6e023aeb692beb89240b8444dac02f749c")]
 [assembly: System.Reflection.AssemblyProductAttribute("LMSBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LMSBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
