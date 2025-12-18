@@ -5,22 +5,20 @@ import BookFormModal from "../BookFormModal";
 import BookTable from "../BookTable";
 import Navbar from "../Navbar";
 
-
 const ManageBooks: React.FC = () => {
   const [books, setBooks] = useState<Book[]>([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [editBook, setEditBook] = useState<Book | undefined>(undefined);
 
   const fetchBooks = async () => {
-  try {
-    const response = await getBooks();
-    console.log("Books from API:", response.data); // <--- see what is fetched
-    setBooks(response.data);
-  } catch (err) {
-    console.error("Error fetching books:", err);
-  }
-};
-
+    try {
+      const response = await getBooks();
+      console.log("Books from API:", response.data);
+      setBooks(response.data);
+    } catch (err) {
+      console.error("Error fetching books:", err);
+    }
+  };
 
   useEffect(() => {
     fetchBooks();
@@ -48,12 +46,32 @@ const ManageBooks: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div className="p-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Manage Books</h1>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded" onClick={() => setModalVisible(true)}>Add Book</button>
+
+      <div className="px-4 md:px-10 lg:px-20">
+        <div className="py-10 flex justify-between items-center">
+          <h1 className="text-2xl font-bold">Manage Books</h1>
+          <button
+            className="bg-black hover:bg-orange-700 transition text-white px-4 py-2 rounded"
+            onClick={() => setModalVisible(true)}
+          >
+            Add Book
+          </button>
+        </div>
+        <BookTable
+          books={books}
+          onEdit={(book) => {
+            setEditBook(book);
+            setModalVisible(true);
+          }}
+          onDelete={handleDelete}
+        />
       </div>
-      <BookTable books={books} onEdit={(book) => { setEditBook(book); setModalVisible(true); }} onDelete={handleDelete}/>
-      <BookFormModal visible={modalVisible} onClose={() => setModalVisible(false)} onSubmit={handleAddEdit} bookToEdit={editBook}/>
+      <BookFormModal
+        visible={modalVisible}
+        onClose={() => setModalVisible(false)}
+        onSubmit={handleAddEdit}
+        bookToEdit={editBook}
+      />
     </div>
   );
 };
