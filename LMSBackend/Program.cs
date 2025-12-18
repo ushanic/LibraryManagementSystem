@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services
 builder.Services.AddControllers();
 
-// ✅ CORS – allow frontend (Vite / React)
+//  CORS – allow frontend (Vite / React)
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-// ✅ SQLite database
+// SQLite database
 builder.Services.AddDbContext<LibraryContext>(options =>
     options.UseSqlite("Data Source=library.db"));
 
