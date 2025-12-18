@@ -44,28 +44,37 @@ const ManageBooks: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
 
-      <div className="px-4 md:px-10 lg:px-20">
-        <div className="py-10 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Manage Books</h1>
+      {/* Container with responsive padding */}
+      <div className="px-4 sm:px-6 md:px-10 lg:px-20 py-8">
+
+        {/* Header section */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold">Manage Books</h1>
           <button
-            className="bg-black hover:bg-orange-700 transition text-white px-4 py-2 rounded"
+            className="bg-black hover:bg-orange-700 transition text-white px-3 sm:px-4 py-2 rounded text-sm sm:text-base"
             onClick={() => setModalVisible(true)}
           >
             Add Book
           </button>
         </div>
-        <BookTable
-          books={books}
-          onEdit={(book) => {
-            setEditBook(book);
-            setModalVisible(true);
-          }}
-          onDelete={handleDelete}
-        />
+
+        {/* Responsive table wrapper */}
+        <div className="overflow-x-auto">
+          <BookTable
+            books={books}
+            onEdit={(book) => {
+              setEditBook(book);
+              setModalVisible(true);
+            }}
+            onDelete={handleDelete}
+          />
+        </div>
       </div>
+
+   
       <BookFormModal
         visible={modalVisible}
         onClose={() => setModalVisible(false)}
