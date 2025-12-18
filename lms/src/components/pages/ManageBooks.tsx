@@ -12,9 +12,15 @@ const ManageBooks: React.FC = () => {
   const [editBook, setEditBook] = useState<Book | undefined>(undefined);
 
   const fetchBooks = async () => {
+  try {
     const response = await getBooks();
+    console.log("Books from API:", response.data); // <--- see what is fetched
     setBooks(response.data);
-  };
+  } catch (err) {
+    console.error("Error fetching books:", err);
+  }
+};
+
 
   useEffect(() => {
     fetchBooks();
