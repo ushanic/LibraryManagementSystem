@@ -1,4 +1,4 @@
-namespace LibraryManagementSystem.Models
+namespace LMSBackend.Models 
 {
     public class Book
     {
@@ -7,7 +7,7 @@ namespace LibraryManagementSystem.Models
         public string Author { get; set; } = null!;
         public string Description { get; set; } = null!;
         public string RackNumber { get; set; } = null!;
-        public string Status { get; set; } = null!; 
+        public string Status { get; set; } = null!;
         public string ImageUrl { get; set; } = null!;
     }
 }

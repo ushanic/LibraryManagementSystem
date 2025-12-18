@@ -5,3 +5,12 @@ C:\Users\Ushani\LMSBackend\obj\Debug\net6.0\LMSBackend.AssemblyInfo.cs
 C:\Users\Ushani\LMSBackend\obj\Debug\net6.0\LMSBackend.csproj.CoreCompileInputs.cache
 C:\Users\Ushani\LMSBackend\obj\Debug\net6.0\LMSBackend.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Ushani\LMSBackend\obj\Debug\net6.0\LMSBackend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ushani\OneDrive\Desktop\LMS\LMSBackend\obj\Debug\net6.0\LMSBackend.csproj.AssemblyReference.cache
+C:\Users\Ushani\OneDrive\Desktop\LMS\LMSBackend\obj\Debug\net6.0\rpswa.dswa.cache.json
+C:\Users\Ushani\OneDrive\Desktop\LMS\LMSBackend\obj\Debug\net6.0\LMSBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ushani\OneDrive\Desktop\LMS\LMSBackend\obj\Debug\net6.0\LMSBackend.AssemblyInfoInputs.cache
+C:\Users\Ushani\OneDrive\Desktop\LMS\LMSBackend\obj\Debug\net6.0\LMSBackend.AssemblyInfo.cs
+C:\Users\Ushani\OneDrive\Desktop\LMS\LMSBackend\obj\Debug\net6.0\LMSBackend.csproj.CoreCompileInputs.cache
+C:\Users\Ushani\OneDrive\Desktop\LMS\LMSBackend\obj\Debug\net6.0\LMSBackend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ushani\OneDrive\Desktop\LMS\LMSBackend\obj\Debug\net6.0\LMSBackend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ushani\OneDrive\Desktop\LMS\LMSBackend\obj\Debug\net6.0\LMSBackend.sourcelink.json
