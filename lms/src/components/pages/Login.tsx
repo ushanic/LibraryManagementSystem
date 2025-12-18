@@ -18,7 +18,7 @@ function Login () {
   return (
     <div className="flex flex-col md:flex-row h-screen w-full">
       
-      {/* Left Image Section (hidden on mobile) */}
+      
       <div className="hidden md:block md:w-1/2">
         <img
           src={bgImage}

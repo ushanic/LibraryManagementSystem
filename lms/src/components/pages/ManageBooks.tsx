@@ -47,7 +47,7 @@ const ManageBooks: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
 
-      {/* Container with responsive padding */}
+      {/* Container with responsive */}
       <div className="px-4 sm:px-6 md:px-10 lg:px-20 py-8">
 
         {/* Header section */}
